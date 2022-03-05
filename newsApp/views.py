@@ -4,7 +4,7 @@ from newsapi import NewsApiClient
 
 def index(request):
     newsApi = NewsApiClient(api_key='3a7a83b0f45645dd8df44905ca9abf7e')
-    headlines = newsApi.get_top_headlines(sources='al-jazeera-english')
+    headlines = newsApi.get_top_headlines(sources='the-wall-street-journal')
     articles = headlines['articles']
     desc = []
     news = []
