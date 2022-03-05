@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>News App</title>
+
+    </head>
+
+    <body>
+        <h4>News App</h4>
+        <img src="{% static 'images/img.png' %}">
+        <h2>Latest News using news API</h2>
+        <img src="{% static 'images/img_1.png' %}">
+
+        {% for hl, des, img in mylist %}
+        <img src="{{ img }}" alt="image">
+        <h4>Headline:</h4>
+        <h5>{{ hl }}</h5>
+        <h4>Description:</h4>
+        <h5>{{ des }}</h5>
+        {% endfor %}
+
+    </body>
+
+</html>
